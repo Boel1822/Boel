@@ -1,23 +1,21 @@
 // ============================================================
-// FIREBASE SETUP (wajib diisi agar tombol Masuk/Daftar berfungsi)
+// FIREBASE SETUP
 // ------------------------------------------------------------
-// 1. Buka https://console.firebase.google.com/ dan buat project baru (gratis).
-// 2. Di Project Settings > General > "Your apps", klik "Add app" > pilih Web (</>).
-// 3. Salin object firebaseConfig yang diberikan Firebase, lalu tempel di bawah ini.
-// 4. Buka menu Authentication > Sign-in method > aktifkan provider "Email/Password".
-// Tanpa langkah ini, tombol Masuk/Daftar akan menampilkan pesan error.
+// Project: nalvost-beauty
+// PENTING: pastikan Authentication > Sign-in method > "Email/Password"
+// sudah diaktifkan di Firebase Console, dan domain tempat situs ini
+// di-hosting sudah ditambahkan di Authentication > Settings >
+// Authorized domains (localhost & *.firebaseapp.com sudah otomatis
+// diizinkan secara default).
 // ============================================================
 const firebaseConfig = {
-  apiKey: "GANTI_DENGAN_API_KEY_ANDA",
-  authDomain: "GANTI_DENGAN_PROJECT_ANDA.firebaseapp.com",
-  projectId: "GANTI_DENGAN_PROJECT_ID_ANDA",
-  storageBucket: "GANTI_DENGAN_PROJECT_ANDA.appspot.com",
-  messagingSenderId: "GANTI_DENGAN_SENDER_ID_ANDA",
-  appId: "GANTI_DENGAN_APP_ID_ANDA",
+  apiKey: "AIzaSyCHue0zH7m-f82XmBOkYdundAFloa9EkUM",
+  authDomain: "nalvost-beauty.firebaseapp.com",
+  projectId: "nalvost-beauty",
+  storageBucket: "nalvost-beauty.firebasestorage.app",
+  messagingSenderId: "1039105281308",
+  appId: "1:1039105281308:web:a3626147dfa628fe08bed9",
+  measurementId: "G-RDZ9RWNKPC",
 };
-
-if (firebaseConfig.apiKey.startsWith("GANTI_DENGAN")) {
-  console.warn("[Nalvost Beauty] Firebase belum dikonfigurasi. Lihat firebase-config.js untuk instruksi setup.");
-}
 
 firebase.initializeApp(firebaseConfig);
