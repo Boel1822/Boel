@@ -160,7 +160,7 @@ function confirmCheckoutViaWhatsApp() {
   const itemLines = cart.map((item) => `- ${item.name} x${item.qty} = ${formatRupiah(item.price * item.qty)}`).join("\n");
   const total = formatRupiah(cartTotal(cart));
   const message = [
-    "Halo Nalvost Beauty, saya ingin konfirmasi pesanan & pembayaran QRIS:",
+    "Halo Nalvost Beauty, saya ingin memesan:",
     "",
     itemLines,
     `Total: ${total}`,
@@ -170,7 +170,7 @@ function confirmCheckoutViaWhatsApp() {
     `Alamat: ${address}`,
     user ? `Email akun: ${user.email}` : "",
     "",
-    "Bukti transfer QRIS akan saya kirimkan menyusul di chat ini.",
+    "Mohon info metode pembayaran yang tersedia. Terima kasih.",
   ]
     .filter(Boolean)
     .join("\n");
